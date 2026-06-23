@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopHub — Modern Shopping Destination</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-spinner">
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+        </div>
+        <!-- <p class="preloader-text">Loading ShopHub...</p> -->
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#home" class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    Shop<span>Hub</span>
+                </a>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="pages/shop.html"><i class="fas fa-store"></i> Shop</a></li>
+                    <li><a href="pages/categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
+                    <li><a href="pages/features.html"><i class="fas fa-star"></i> Features</a></li>
+                    <li><a href="pages/testimonials.html"><i class="fas fa-comments"></i> Reviews</a></li>
+                    <li><a href="pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="icon-btn search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="icon-btn wishlist-btn" aria-label="Wishlist">
+                        <i class="fas fa-heart"></i>
+                        <span class="badge-dot">3</span>
+                    </button>
+                    <button class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for products, brands and more...">
+                    <button class="close-search" id="closeSearch"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="badge floating">
+                        <i class="fas fa-sparkles"></i> New Collection 2026
+                    </span>
+                    <h1 class="hero-title">
+                        Discover Your <span class="highlight gradient-text">Perfect Style</span>
+                    </h1>
+                    <p class="hero-description">
+                        Curated collections of premium products delivered to your door.
+                        Quality, value, and style — all in one place. Experience shopping reimagined.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary btn-3d">
+                            Shop Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#features" class="btn btn-outline btn-3d">
+                            <i class="fas fa-play-circle"></i> Learn More
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <strong class="counter" data-target="10000">0</strong>
+                            <span>Happy Customers</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <strong class="counter" data-target="500">0</strong>
+                            <span>Premium Products</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <strong>4.9<i class="fas fa-star"></i></strong>
+                            <span>Customer Rating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" id="heroVisual">
+                    <!-- 3D Card Stack -->
+                    <div class="card-stack">
+                        <div class="floating-card card-back-1">
+                            <img src="https://picsum.photos/seed/headphones/400/400" alt="Wireless Headphones">
+                            <div class="card-info">
+                                <h4>Headphones</h4>
+                                <span>$129.99</span>
+                            </div>
+                        </div>
+                        <div class="floating-card card-back-2">
+                            <img src="https://picsum.photos/seed/watch/400/400" alt="Smart Watch">
+                            <div class="card-info">
+                                <h4>Smart Watch</h4>
+                                <span>$249.99</span>
+                            </div>
+                        </div>
+                        <div class="floating-card card-main" id="cardMain">
+                            <div class="card-badge">NEW</div>
+                            <img src="https://picsum.photos/seed/featured/500/500" alt="Featured Product">
+                            <div class="card-info">
+                                <span class="category">Electronics</span>
+                                <h4>Premium Headphones Pro</h4>
+                                <div class="card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(2.4k)</span>
+                                </div>
+                                <div class="card-price">
+                                    <span class="old-price">$299</span>
+                                    <span class="new-price">$199</span>
+                                </div>
+                            </div>
+                            <button class="card-add-btn">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Floating elements -->
+                    <div class="floating-element fe-1">
+                        <i class="fas fa-fire"></i>
+                        <span>Hot Deal</span>
+                    </div>
+                    <div class="floating-element fe-2">
+                        <i class="fas fa-truck"></i>
+                        <span>Free Ship</span>
+                    </div>
+                    <div class="floating-element fe-3">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trusted By -->
+        <div class="trusted-by">
+            <p>Trusted by leading brands worldwide</p>
+            <div class="brand-logos">
+                <span><i class="fab fa-apple"></i></span>
+                <span><i class="fab fa-google"></i></span>
+                <span><i class="fab fa-microsoft"></i></span>
+                <span><i class="fab fa-amazon"></i></span>
+                <span><i class="fab fa-spotify"></i></span>
+                <span><i class="fab fa-spotify"></i></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Browse Categories</span>
+                <h2 class="section-title">Shop by Category</h2>
+                <p class="section-subtitle">Explore our wide range of product categories tailored just for you</p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card" style="--cat-color: #6366f1;">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <img src="https://picsum.photos/seed/electronics/300/200" alt="Electronics">
+                    <div class="category-info">
+                        <h3>Electronics</h3>
+                        <p>120+ Products</p>
+                    </div>
+                    <a href="#" class="category-link"><i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="category-card" style="--cat-color: #ec4899;">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <img src="https://picsum.photos/seed/fashion/300/200" alt="Fashion">
+                    <div class="category-info">
+                        <h3>Fashion</h3>
+                        <p>250+ Products</p>
+                    </div>
+                    <a href="#" class="category-link"><i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="category-card" style="--cat-color: #f59e0b;">
+                    <div class="category-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <img src="https://picsum.photos/seed/home/300/200" alt="Home & Living">
+                    <div class="category-info">
+                        <h3>Home & Living</h3>
+                        <p>180+ Products</p>
+                    </div>
+                    <a href="#" class="category-link"><i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="category-card" style="--cat-color: #10b981;">
+                    <div class="category-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <img src="https://picsum.photos/seed/sports/300/200" alt="Sports">
+                    <div class="category-info">
+                        <h3>Sports</h3>
+                        <p>95+ Products</p>
+                    </div>
+                    <a href="#" class="category-link"><i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="category-card" style="--cat-color: #8b5cf6;">
+                    <div class="category-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <img src="https://picsum.photos/seed/books/300/200" alt="Books">
+                    <div class="category-info">
+                        <h3>Books</h3>
+                        <p>320+ Products</p>
+                    </div>
+                    <a href="#" class="category-link"><i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="category-card" style="--cat-color: #ef4444;">
+                    <div class="category-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <img src="https://picsum.photos/seed/gaming/300/200" alt="Gaming">
+                    <div class="category-info">
+                        <h3>Gaming</h3>
+                        <p>75+ Products</p>
+                    </div>
+                    <a href="#" class="category-link"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Why Choose Us</span>
+                <h2 class="section-title">Why ShopHub is Different</h2>
+                <p class="section-subtitle">We provide the best shopping experience with these amazing features</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" style="--feat-color: #6366f1;">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon"><i class="fas fa-truck"></i></div>
+                    </div>
+                    <h3>Free Shipping</h3>
+                    <p>Free delivery on all orders over $50. Fast and reliable shipping to your doorstep.</p>
+                    <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="feature-card" style="--feat-color: #10b981;">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    </div>
+                    <h3>Secure Payment</h3>
+                    <p>Your transactions are protected with top-grade encryption and security protocols.</p>
+                    <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="feature-card" style="--feat-color: #f59e0b;">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon"><i class="fas fa-undo"></i></div>
+                    </div>
+                    <h3>Easy Returns</h3>
+                    <p>30-day hassle-free return policy. No questions asked refund guarantee.</p>
+                    <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="feature-card" style="--feat-color: #ec4899;">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated team is always here to help you with anything you need.</p>
+                    <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Products</span>
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-subtitle">Hand-picked products that our customers love the most</p>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> All
+                </button>
+                <button class="filter-btn" data-filter="electronics">
+                    <i class="fas fa-laptop"></i> Electronics
+                </button>
+                <button class="filter-btn" data-filter="fashion">
+                    <i class="fas fa-tshirt"></i> Fashion
+                </button>
+                <button class="filter-btn" data-filter="home">
+                    <i class="fas fa-couch"></i> Home
+                </button>
+                <button class="filter-btn" data-filter="sports">
+                    <i class="fas fa-dumbbell"></i> Sports
+                </button>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card" data-category="electronics">
+                    <div class="product-image">
+                        <img src="https://picsum.photos/seed/headphones1/400/400" alt="Wireless Headphones">
+                        <span class="product-badge badge-new">New</span>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Quick view"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Electronics</span>
+                        <h3>Wireless Noise-Cancel Headphones</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(245)</span>
+                        </div>
+                        <div class="product-bottom">
+                            <span class="price">$129.99</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="fashion">
+                    <div class="product-image">
+                        <img src="https://picsum.photos/seed/backpack1/400/400" alt="Leather Backpack">
+                        <span class="product-badge badge-sale">-30%</span>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Quick view"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Fashion</span>
+                        <h3>Premium Leather Backpack</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(189)</span>
+                        </div>
+                        <div class="product-bottom">
+                            <span class="price">$89.99 <s>$129.99</s></span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="home">
+                    <div class="product-image">
+                        <img src="https://picsum.photos/seed/vase1/400/400" alt="Ceramic Vase Set">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Quick view"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Home</span>
+                        <h3>Ceramic Vase Set of 3</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(76)</span>
+                        </div>
+                        <div class="product-bottom">
+                            <span class="price">$45.99</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="electronics">
+                    <div class="product-image">
+                        <img src="https://picsum.photos/seed/watch1/400/400" alt="Smart Watch">
+                        <span class="product-badge badge-hot">Hot</span>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Quick view"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Electronics</span>
+                        <h3>Smart Fitness Watch Pro</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(412)</span>
+                        </div>
+                        <div class="product-bottom">
+                            <span class="price">$249.99</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="fashion">
+                    <div class="product-image">
+                        <img src="https://picsum.photos/seed/shoes1/400/400" alt="Running Shoes">
+                        <span class="product-badge badge-popular">Popular</span>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Quick view"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Fashion</span>
+                        <h3>Premium Running Shoes</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(328)</span>
+                        </div>
+                        <div class="product-bottom">
+                            <span class="price">$79.99</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="home">
+                    <div class="product-image">
+                        <img src="https://picsum.photos/seed/lamp1/400/400" alt="LED Desk Lamp">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Quick view"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Home</span>
+                        <h3>LED Desk Lamp with USB</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(94)</span>
+                        </div>
+                        <div class="product-bottom">
+                            <span class="price">$39.99</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sports">
+                    <div class="product-image">
+                        <img src="https://picsum.photos/seed/yoga1/400/400" alt="Yoga Mat">
+                        <span class="product-badge badge-new">New</span>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Quick view"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Sports</span>
+                        <h3>Premium Yoga Mat</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(156)</span>
+                        </div>
+                        <div class="product-bottom">
+                            <span class="price">$29.99</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="electronics">
+                    <div class="product-image">
+                        <img src="https://picsum.photos/seed/speaker1/400/400" alt="Bluetooth Speaker">
+                        <span class="product-badge badge-sale">-25%</span>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Quick view"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Electronics</span>
+                        <h3>Portable Bluetooth Speaker</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(203)</span>
+                        </div>
+                        <div class="product-bottom">
+                            <span class="price">$59.99 <s>$79.99</s></span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-all-wrap">
+                <a href="#" class="btn btn-outline btn-3d">View All Products <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="promo-content">
+                <div class="promo-text">
+                    <span class="promo-badge">Limited Time Offer</span>
+                    <h2>Get <span class="highlight">50% OFF</span> on your first order</h2>
+                    <p>Sign up today and unlock exclusive deals, early access to sales, and free shipping on your first order.</p>
+                    <div class="promo-timer">
+                        <div class="timer-item">
+                            <strong id="days">02</strong>
+                            <span>Days</span>
+                        </div>
+                        <div class="timer-item">
+                            <strong id="hours">14</strong>
+                            <span>Hours</span>
+                        </div>
+                        <div class="timer-item">
+                            <strong id="minutes">35</strong>
+                            <span>Mins</span>
+                        </div>
+                        <div class="timer-item">
+                            <strong id="seconds">48</strong>
+                            <span>Secs</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-light btn-3d">Claim Offer <i class="fas fa-gift"></i></a>
+                </div>
+                <div class="promo-image">
+                    <img src="https://picsum.photos/seed/promo/500/400" alt="Special Offer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Testimonials</span>
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Real stories from real customers who love shopping with us</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Amazing quality and super fast shipping. The products exceeded my expectations! Will definitely order again from ShopHub."</p>
+                    <div class="testimonial-author">
+                        <img src="https://picsum.photos/seed/sarah/100/100" alt="Sarah Johnson">
+                        <div class="author-info">
+                            <strong>Sarah Johnson</strong>
+                            <span><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Best online shopping experience I've had. Customer service is top-notch and the product range is incredible."</p>
+                    <div class="testimonial-author">
+                        <img src="https://picsum.photos/seed/michael/100/100" alt="Michael Chen">
+                        <div class="author-info">
+                            <strong>Michael Chen</strong>
+                            <span><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The products exceeded my expectations. Great value for the price and lightning fast delivery. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://picsum.photos/seed/emily/100/100" alt="Emily Davis">
+                        <div class="author-info">
+                            <strong>Emily Davis</strong>
+                            <span><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <h3 class="counter" data-target="10000">0</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon"><i class="fas fa-box-open"></i></div>
+                    <h3 class="counter" data-target="5000">0</h3>
+                    <p>Products Sold</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon"><i class="fas fa-globe"></i></div>
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p>Countries Served</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon"><i class="fas fa-award"></i></div>
+                    <h3 class="counter" data-target="120">0</h3>
+                    <p>Awards Won</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-shapes">
+            <div class="ns-shape ns-1"></div>
+            <div class="ns-shape ns-2"></div>
+        </div>
+        <div class="container">
+            <div class="newsletter-content">
+                <span class="section-badge light">Newsletter</span>
+                <h2>Stay in the Loop</h2>
+                <p>Subscribe to our newsletter for exclusive deals, new arrivals, and insider-only discounts delivered straight to your inbox.</p>
+                <form class="newsletter-form">
+                    <div class="input-wrap">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email address" required>
+                    </div>
+                    <button type="submit" class="btn btn-light btn-3d">
+                        Subscribe <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+                <p class="newsletter-terms">
+                    <i class="fas fa-lock"></i> We respect your privacy. Unsubscribe anytime.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-shopping-bag"></i>
+                        Shop<span>Hub</span>
+                    </div>
+                    <p>Your modern shopping destination for premium products at unbeatable prices. Quality meets style in every purchase.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> New Arrivals</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Best Sellers</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Sale Items</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Gift Cards</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Lookbook</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Help Center</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Shipping Info</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Returns</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Order Tracking</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Careers</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Press</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Partnerships</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Shopping Street, NY 10001, USA</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>support@shophub.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Fri: 9AM - 8PM</span>
+                        </li>
+                    </ul>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-apple-pay"></i>
+                        <i class="fab fa-cc-stripe"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ShopHub. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

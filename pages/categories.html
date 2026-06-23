@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - ShopHub</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    Shop<span>Hub</span>
+                </a>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="shop.html"><i class="fas fa-store"></i> Shop</a></li>
+                    <li><a href="categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
+                    <li><a href="features.html"><i class="fas fa-star"></i> Features</a></li>
+                    <li><a href="testimonials.html"><i class="fas fa-comments"></i> Reviews</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="icon-btn search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="icon-btn wishlist-btn" aria-label="Wishlist">
+                        <i class="fas fa-heart"></i>
+                        <span class="badge-dot">3</span>
+                    </button>
+                    <button class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for products, brands and more...">
+                    <button class="close-search" id="closeSearch"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Categories Hero -->
+    <section class="categories-hero">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="page-title">Shop by Category</h1>
+                <p class="page-subtitle">Explore our extensive collection organized by category</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Grid -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <div class="categories-grid">
+                <div class="category-card" style="--cat-color: #6366f1;">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <img src="https://picsum.photos/seed/electronics/300/200" alt="Electronics">
+                    <div class="category-info">
+                        <h3>Electronics</h3>
+                        <p>120+ Products</p>
+                    </div>
+                    <a href="shop.html?cat=electronics" class="category-link"><i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="category-card" style="--cat-color: #ec4899;">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <img src="https://picsum.photos/seed/fashion/300/200" alt="Fashion">
+                    <div class="category-info">
+                        <h3>Fashion</h3>
+                        <p>250+ Products</p>
+                    </div>
+                    <a href="shop.html?cat=fashion" class="category-link"><i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="category-card" style="--cat-color: #f59e0b;">
+                    <div class="category-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <img src="https://picsum.photos/seed/home/300/200" alt="Home & Living">
+                    <div class="category-info">
+                        <h3>Home & Living</h3>
+                        <p>180+ Products</p>
+                    </div>
+                    <a href="shop.html?cat=home" class="category-link"><i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="category-card" style="--cat-color: #10b981;">
+                    <div class="category-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <img src="https://picsum.photos/seed/sports/300/200" alt="Sports">
+                    <div class="category-info">
+                        <h3>Sports</h3>
+                        <p>95+ Products</p>
+                    </div>
+                    <a href="shop.html?cat=sports" class="category-link"><i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="category-card" style="--cat-color: #8b5cf6;">
+                    <div class="category-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <img src="https://picsum.photos/seed/books/300/200" alt="Books">
+                    <div class="category-info">
+                        <h3>Books</h3>
+                        <p>320+ Products</p>
+                    </div>
+                    <a href="shop.html?cat=books" class="category-link"><i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="category-card" style="--cat-color: #ef4444;">
+                    <div class="category-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <img src="https://picsum.photos/seed/gaming/300/200" alt="Gaming">
+                    <div class="category-info">
+                        <h3>Gaming</h3>
+                        <p>75+ Products</p>
+                    </div>
+                    <a href="shop.html?cat=gaming" class="category-link"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-newsletter">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get exclusive offers and be the first to know about new arrivals</p>
+                </div>
+                <form class="footer-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-shopping-bag"></i>
+                        Shop<span>Hub</span>
+                    </div>
+                    <p>Your modern shopping destination for premium products at unbeatable prices. Trusted by 10,000+ customers worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="shop.html">All Products</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="#">Flash Deals</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="features.html">About Us</a></li>
+                        <li><a href="testimonials.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>123 Shopping Street, Commerce City</span></li>
+                        <li><i class="fas fa-phone"></i> <span><a href="tel:+1234567890">+1 (234) 567-890</a></span></li>
+                        <li><i class="fas fa-envelope"></i> <span><a href="mailto:support@shophub.com">support@shophub.com</a></span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ShopHub. All rights reserved. | Designed with ❤️</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/svg-images.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — ShopHub</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <div class="announcement-bar">
+        <div class="container">
+            <div class="announcement-content">
+                <span><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/></svg> Free shipping on orders over $50</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../index.html" class="logo">
+                    <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                    Shop<span>Hub</span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="wishlist.html" class="icon-btn"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg><span class="badge-dot" id="wishlistCount">0</span></a>
+                    <button class="cart-btn" id="cartToggle"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4"/></svg><span class="cart-text">Cart</span><span class="cart-count">0</span></button>
+                    <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4"/></svg> Your Cart (<span id="cartItemCount">0</span>)</h3>
+            <button class="close-cart" id="closeCart"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12"/></svg></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-empty" id="cartEmpty">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <p>Your cart is empty</p>
+        </div>
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-summary">
+                <div class="summary-row total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+            </div>
+            <a href="checkout.html" class="btn btn-primary checkout-btn">Proceed to Checkout</a>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>About ShopHub</h1>
+            <p>Our story, mission, and commitment to you</p>
+            <nav class="breadcrumb"><a href="../index.html">Home</a> / <span>About</span></nav>
+        </div>
+    </section>
+
+    <!-- About Story -->
+    <section class="about-section" style="padding-top: 3rem;">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-img-main"><img src="" data-img="about1" alt="About"></div>
+                    <div class="about-img-sub"><img src="" data-img="about2" alt="Store"></div>
+                    <div class="about-img-sub about-img-sub-2"><img src="" data-img="about3" alt="Team"></div>
+                    <div class="experience-badge"><strong>15+</strong><span>Years of Excellence</span></div>
+                </div>
+                <div class="about-content">
+                    <span class="section-badge">Our Story</span>
+                    <h2 class="section-title" style="text-align:left;">Your Trusted Shopping Partner Since 2010</h2>
+                    <p>At ShopHub, we believe shopping should be more than just a transaction — it should be an experience. For over 15 years, we've been curating the finest products from around the world.</p>
+                    <p>Our mission is simple: to make premium products accessible to everyone, with exceptional customer service every step of the way.</p>
+
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <div><strong>Premium Quality</strong><span>Hand-selected products from trusted brands</span></div>
+                        </div>
+                        <div class="about-feature">
+                            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <div><strong>Fast Delivery</strong><span>Same-day shipping on orders before 2 PM</span></div>
+                        </div>
+                        <div class="about-feature">
+                            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <div><strong>Customer First</strong><span>24/7 support with 98% satisfaction rate</span></div>
+                        </div>
+                        <div class="about-feature">
+                            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <div><strong>Eco-Friendly</strong><span>Sustainable packaging and carbon-neutral shipping</span></div>
+                        </div>
+                    </div>
+
+                    <a href="shop.html" class="btn btn-primary">Explore Products <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-header">
+                <h2>Our Achievements</h2>
+                <p>Numbers that reflect our commitment to excellence</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7"/></svg></div>
+                    <h3>10K+</h3><p>Happy Customers</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6L5 8z"/></svg></div>
+                    <h3>50K+</h3><p>Products Sold</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.055 11H5a2 2 0 012 2v1"/></svg></div>
+                    <h3>50+</h3><p>Countries Served</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/></svg></div>
+                    <h3>120+</h3><p>Awards Won</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0"/></svg></div>
+                    <h3>4.9/5</h3><p>Average Rating</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section style="padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Team</span>
+                <h2 class="section-title">Meet the Leadership</h2>
+                <p class="section-subtitle">The passionate people behind ShopHub's success</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="" data-avatar="Sarah" alt="CEO">
+                    <h4>Sarah Johnson</h4>
+                    <span>CEO & Founder</span>
+                    <p>15+ years in e-commerce and retail strategy</p>
+                    <div class="team-social"><a href="#">f</a><a href="#">t</a><a href="#">in</a></div>
+                </div>
+                <div class="team-card">
+                    <img src="" data-avatar="Michael" alt="CTO">
+                    <h4>Michael Chen</h4>
+                    <span>CTO</span>
+                    <p>Tech visionary driving innovation at ShopHub</p>
+                    <div class="team-social"><a href="#">f</a><a href="#">t</a><a href="#">in</a></div>
+                </div>
+                <div class="team-card">
+                    <img src="" data-avatar="Emily" alt="COO">
+                    <h4>Emily Davis</h4>
+                    <span>Head of Operations</span>
+                    <p>Ensuring smooth operations and customer satisfaction</p>
+                    <div class="team-social"><a href="#">f</a><a href="#">t</a><a href="#">in</a></div>
+                </div>
+                <div class="team-card">
+                    <img src="" data-avatar="David" alt="CMO">
+                    <h4>David Wilson</h4>
+                    <span>Marketing Director</span>
+                    <p>Building the ShopHub brand globally</p>
+                    <div class="team-social"><a href="#">f</a><a href="#">t</a><a href="#">in</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>Shop<span>Hub</span></div>
+                    <p>Your modern shopping destination.</p>
+                </div>
+                <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="about.html">About</a></li></ul></div>
+                <div class="footer-col"><h4>Customer</h4><ul><li><a href="wishlist.html">Wishlist</a></li><li><a href="checkout.html">Checkout</a></li></ul></div>
+                <div class="footer-col"><h4>Contact</h4><ul class="contact-info"><li>📍 123 Shopping Street, NY</li><li>📞 +1 (555) 123-4567</li><li>✉️ support@shophub.com</li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 ShopHub. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="../js/svg-images.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

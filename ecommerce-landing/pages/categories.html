@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories — ShopHub</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <div class="announcement-bar">
+        <div class="container">
+            <div class="announcement-content">
+                <span><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/></svg> Free shipping on orders over $50</span>
+                <span class="hidden-mobile"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v8m4-4H8"/></svg> Use code <strong>SHOP20</strong> for 20% off</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../index.html" class="logo">
+                    <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                    Shop<span>Hub</span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="categories.html" class="active">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="wishlist.html" class="icon-btn"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg><span class="badge-dot" id="wishlistCount">0</span></a>
+                    <button class="cart-btn" id="cartToggle"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4"/></svg><span class="cart-text">Cart</span><span class="cart-count">0</span></button>
+                    <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4"/></svg> Your Cart (<span id="cartItemCount">0</span>)</h3>
+            <button class="close-cart" id="closeCart"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12"/></svg></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-empty" id="cartEmpty">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <p>Your cart is empty</p>
+        </div>
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-summary">
+                <div class="summary-row total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+            </div>
+            <a href="checkout.html" class="btn btn-primary checkout-btn">Proceed to Checkout</a>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>All Categories</h1>
+            <p>Browse products by your favorite categories</p>
+            <nav class="breadcrumb"><a href="../index.html">Home</a> / <span>Categories</span></nav>
+        </div>
+    </section>
+
+    <section class="categories" style="padding-top: 3rem;">
+        <div class="container">
+            <div class="categories-grid">
+                <a href="shop.html?cat=electronics" class="category-card" style="--cat-color: #1e3a5f; height: 240px;">
+                    <img data-img="electronics" alt="Electronics">
+                    <div class="category-info"><h3>Electronics</h3><p>120+ Products</p></div>
+                </a>
+                <a href="shop.html?cat=fashion" class="category-card" style="--cat-color: #059669; height: 240px;">
+                    <img data-img="fashion" alt="Fashion">
+                    <div class="category-info"><h3>Fashion</h3><p>250+ Products</p></div>
+                </a>
+                <a href="shop.html?cat=home" class="category-card" style="--cat-color: #d4a574; height: 240px;">
+                    <img data-img="home" alt="Home">
+                    <div class="category-info"><h3>Home & Living</h3><p>180+ Products</p></div>
+                </a>
+                <a href="shop.html?cat=sports" class="category-card" style="--cat-color: #0d9488; height: 240px;">
+                    <img data-img="sports" alt="Sports">
+                    <div class="category-info"><h3>Sports</h3><p>95+ Products</p></div>
+                </a>
+                <a href="shop.html?cat=books" class="category-card" style="--cat-color: #4338ca; height: 240px;">
+                    <img data-img="books" alt="Books">
+                    <div class="category-info"><h3>Books</h3><p>320+ Products</p></div>
+                </a>
+                <a href="shop.html?cat=gaming" class="category-card" style="--cat-color: #b91c1c; height: 240px;">
+                    <img data-img="gaming" alt="Gaming">
+                    <div class="category-info"><h3>Gaming</h3><p>75+ Products</p></div>
+                </a>
+                <a href="shop.html?cat=beauty" class="category-card" style="--cat-color: #be185d; height: 240px;">
+                    <img data-img="electronics" alt="Beauty">
+                    <div class="category-info"><h3>Beauty</h3><p>210+ Products</p></div>
+                </a>
+                <a href="shop.html?cat=groceries" class="category-card" style="--cat-color: #4d7c0f; height: 240px;">
+                    <img data-img="home" alt="Groceries">
+                    <div class="category-info"><h3>Groceries</h3><p>450+ Products</p></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>Shop<span>Hub</span></div>
+                    <p>Your modern shopping destination.</p>
+                </div>
+                <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="about.html">About</a></li></ul></div>
+                <div class="footer-col"><h4>Customer</h4><ul><li><a href="wishlist.html">Wishlist</a></li><li><a href="checkout.html">Checkout</a></li></ul></div>
+                <div class="footer-col"><h4>Contact</h4><ul class="contact-info"><li>📍 123 Shopping Street, NY</li><li>📞 +1 (555) 123-4567</li><li>✉️ support@shophub.com</li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 ShopHub. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="../js/svg-images.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
