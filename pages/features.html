@@ -40,6 +40,9 @@
                         <span>Cart</span>
                         <span class="cart-count">0</span>
                     </button>
+                    <button class="icon-btn account-btn" id="accountBtn" aria-label="Account">
+                        <i class="fas fa-user"></i>
+                    </button>
                     <button class="menu-toggle" id="menuToggle" aria-label="Menu">
                         <span></span><span></span><span></span>
                     </button>
@@ -215,6 +218,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeLoginModal">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group"><label for="username">Username</label><input type="text" id="username" required>
+                </div>
+                <div class="form-group"><label for="password">Password</label><input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <p id="loginMessage"></p>
+        </div>
+    </div>
 
     <script src="../js/svg-images.js"></script>
     <script src="../js/main.js"></script>

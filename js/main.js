@@ -9,128 +9,135 @@
 let productsData = [];
 
 // Initialize products after SVGImages is loaded
-function initializeProducts() {
-    productsData = [
-    {
-        id: 1,
-        name: "Wireless Noise-Cancel Headphones",
-        category: "electronics",
-        price: 129.99,
-        oldPrice: null,
-        image: "https://picsum.photos/seed/headphones1/400/400",
-        rating: 4.5,
-        reviews: 245,
-        badge: "New",
-        badgeType: "badge-new",
-        description: "Premium wireless headphones with active noise cancellation, 30-hour battery life, and superior sound quality. Perfect for music lovers and professionals."
-    },
-    {
-        id: 2,
-        name: "Premium Leather Backpack",
-        category: "fashion",
-        price: 89.99,
-        oldPrice: 129.99,
-        image: "https://picsum.photos/seed/backpack1/400/400",
-        rating: 5,
-        reviews: 189,
-        badge: "-30%",
-        badgeType: "badge-sale",
-        description: "Handcrafted genuine leather backpack with laptop compartment, multiple pockets, and water-resistant coating. Style meets functionality."
-    },
-    {
-        id: 3,
-        name: "Ceramic Vase Set of 3",
-        category: "home",
-        price: 45.99,
-        oldPrice: null,
-        image: "https://picsum.photos/seed/vase1/400/400",
-        rating: 4,
-        reviews: 76,
-        badge: null,
-        badgeType: null,
-        description: "Elegant set of 3 ceramic vases in different sizes. Modern minimalist design perfect for any home decor. Each vase is hand-painted."
-    },
-    {
-        id: 4,
-        name: "Smart Fitness Watch Pro",
-        category: "electronics",
-        price: 249.99,
-        oldPrice: null,
-        image: "https://picsum.photos/seed/watch1/400/400",
-        rating: 5,
-        reviews: 412,
-        badge: "Hot",
-        badgeType: "badge-hot",
-        description: "Advanced fitness tracking with heart rate monitor, GPS, sleep tracking, and 7-day battery life. Compatible with iOS and Android."
-    },
-    {
-        id: 5,
-        name: "Premium Running Shoes",
-        category: "fashion",
-        price: 79.99,
-        oldPrice: null,
-        image: "https://picsum.photos/seed/shoes1/400/400",
-        rating: 4.5,
-        reviews: 328,
-        badge: "Popular",
-        badgeType: "badge-popular",
-        description: "Lightweight running shoes with responsive cushioning, breathable mesh upper, and durable rubber outsole. Perfect for daily runs."
-    },
-    {
-        id: 6,
-        name: "LED Desk Lamp with USB",
-        category: "home",
-        price: 39.99,
-        oldPrice: null,
-        image: "https://picsum.photos/seed/lamp1/400/400",
-        rating: 4,
-        reviews: 94,
-        badge: null,
-        badgeType: null,
-        description: "Modern LED desk lamp with adjustable brightness, color temperature control, USB charging port, and touch-sensitive controls."
-    },
-    {
-        id: 7,
-        name: "Premium Yoga Mat",
-        category: "sports",
-        price: 29.99,
-        oldPrice: null,
-        image: "https://picsum.photos/seed/yoga1/400/400",
-        rating: 5,
-        reviews: 156,
-        badge: "New",
-        badgeType: "badge-new",
-        description: "Eco-friendly yoga mat made from natural rubber. Non-slip surface, extra thick for joint protection, and includes carrying strap."
-    },
-    {
-        id: 8,
-        name: "Portable Bluetooth Speaker",
-        category: "electronics",
-        price: 59.99,
-        oldPrice: 79.99,
-        image: "https://picsum.photos/seed/speaker1/400/400",
-        rating: 4.5,
-        reviews: 203,
-        badge: "-25%",
-        badgeType: "badge-sale",
-        description: "Waterproof portable speaker with 360° sound, 12-hour battery, and built-in microphone for hands-free calls."
+async function initializeProducts() {
+    try {
+        const response = await fetch('data/products.json');
+        if (!response.ok) throw new Error('Failed to fetch products');
+        productsData = await response.json();
+    } catch (error) {
+        console.error('Error loading products:', error);
+        // Fallback to hardcoded data
+        productsData = [
+            {
+                id: 1,
+                name: "Wireless Noise-Cancel Headphones",
+                category: "electronics",
+                price: 129.99,
+                oldPrice: null,
+                image: "https://picsum.photos/seed/headphones1/400/400",
+                rating: 4.5,
+                reviews: 245,
+                badge: "New",
+                badgeType: "badge-new",
+                description: "Premium wireless headphones with active noise cancellation, 30-hour battery life, and superior sound quality. Perfect for music lovers and professionals."
+            },
+            {
+                id: 2,
+                name: "Premium Leather Backpack",
+                category: "fashion",
+                price: 89.99,
+                oldPrice: 129.99,
+                image: "https://picsum.photos/seed/backpack1/400/400",
+                rating: 5,
+                reviews: 189,
+                badge: "-30%",
+                badgeType: "badge-sale",
+                description: "Handcrafted genuine leather backpack with laptop compartment, multiple pockets, and water-resistant coating. Style meets functionality."
+            },
+            {
+                id: 3,
+                name: "Ceramic Vase Set of 3",
+                category: "home",
+                price: 45.99,
+                oldPrice: null,
+                image: "https://picsum.photos/seed/vase1/400/400",
+                rating: 4,
+                reviews: 76,
+                badge: null,
+                badgeType: null,
+                description: "Elegant set of 3 ceramic vases in different sizes. Modern minimalist design perfect for any home decor. Each vase is hand-painted."
+            },
+            {
+                id: 4,
+                name: "Smart Fitness Watch Pro",
+                category: "electronics",
+                price: 249.99,
+                oldPrice: null,
+                image: "https://picsum.photos/seed/watch1/400/400",
+                rating: 5,
+                reviews: 412,
+                badge: "Hot",
+                badgeType: "badge-hot",
+                description: "Advanced fitness tracking with heart rate monitor, GPS, sleep tracking, and 7-day battery life. Compatible with iOS and Android."
+            },
+            {
+                id: 5,
+                name: "Premium Running Shoes",
+                category: "fashion",
+                price: 79.99,
+                oldPrice: null,
+                image: "https://picsum.photos/seed/shoes1/400/400",
+                rating: 4.5,
+                reviews: 328,
+                badge: "Popular",
+                badgeType: "badge-popular",
+                description: "Lightweight running shoes with responsive cushioning, breathable mesh upper, and durable rubber outsole. Perfect for daily runs."
+            },
+            {
+                id: 6,
+                name: "LED Desk Lamp with USB",
+                category: "home",
+                price: 39.99,
+                oldPrice: null,
+                image: "https://picsum.photos/seed/lamp1/400/400",
+                rating: 4,
+                reviews: 94,
+                badge: null,
+                badgeType: null,
+                description: "Modern LED desk lamp with adjustable brightness, color temperature control, USB charging port, and touch-sensitive controls."
+            },
+            {
+                id: 7,
+                name: "Premium Yoga Mat",
+                category: "sports",
+                price: 29.99,
+                oldPrice: null,
+                image: "https://picsum.photos/seed/yoga1/400/400",
+                rating: 5,
+                reviews: 156,
+                badge: "New",
+                badgeType: "badge-new",
+                description: "Eco-friendly yoga mat made from natural rubber. Non-slip surface, extra thick for joint protection, and includes carrying strap."
+            },
+            {
+                id: 8,
+                name: "Portable Bluetooth Speaker",
+                category: "electronics",
+                price: 59.99,
+                oldPrice: 79.99,
+                image: "https://picsum.photos/seed/speaker1/400/400",
+                rating: 4.5,
+                reviews: 203,
+                badge: "-25%",
+                badgeType: "badge-sale",
+                description: "Waterproof portable speaker with 360° sound, 12-hour battery, and built-in microphone for hands-free calls."
+            }
+        ];
     }
-];
-    
     // Render products if we're on the shop page
     renderProducts();
 }
 
 // Call initializeProducts when DOM is ready
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeProducts);
+    document.addEventListener('DOMContentLoaded', () => initializeProducts());
 } else {
     initializeProducts();
 }
 
 // ===== State Management =====
-let cart = [];
-let wishlist = [];
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 let currentFilter = 'all';
 let testimonialIndex = 0;
 
@@ -316,6 +323,7 @@ function addToCart(productId, btn) {
     } else {
         cart.push({ ...product, qty: 1 });
     }
+    localStorage.setItem('cart', JSON.stringify(cart));
 
     updateCartUI();
     flyToCart(btn);
@@ -324,6 +332,7 @@ function addToCart(productId, btn) {
 
 function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
+    localStorage.setItem('cart', JSON.stringify(cart));
     updateCartUI();
     renderCartItems();
 }
@@ -336,6 +345,7 @@ function updateQty(productId, delta) {
         removeFromCart(productId);
         return;
     }
+    localStorage.setItem('cart', JSON.stringify(cart));
     updateCartUI();
     renderCartItems();
 }
@@ -415,12 +425,13 @@ function toggleWishlist(productId, btn) {
                 icon.classList.remove('far');
                 icon.classList.add('fas');
                 btn.style.background = '#ec4899';
-                btn.style.color = 'white';
+                btn';
             }
         }
         showToast('Added to Wishlist', `${product.name} saved`, 'success');
     }
-
+    // Persist wishlist
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
     updateWishlistUI();
 }
 
@@ -958,6 +969,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// ===== Checkout Button Handler =====
+document.querySelectorAll('.checkout-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        localStorage.setItem('cart', JSON.stringify(cart));
+        window.location.href = 'pages/checkout.html';
+    });
+});
+
 // ===== Header shadow on scroll (passive + throttled) =====
 const header = document.querySelector('.header');
 let lastScroll = 0;
@@ -974,6 +994,15 @@ window.addEventListener('scroll', () => {
         ticking = true;
     }
 }, { passive: true });
+
+// ===== Checkout Button Handling =====
+document.querySelectorAll('.checkout-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        localStorage.setItem('cart', JSON.stringify(cart));
+        window.location.href = 'pages/checkout.html';
+    });
+});
 
 // ===== Inject Animation Styles (minimal) =====
 const style = document.createElement('style');
@@ -995,6 +1024,98 @@ document.addEventListener('DOMContentLoaded', () => {
 const observer = new MutationObserver(() => attachTiltEffect());
 const productsGrid = document.getElementById('productsGrid');
 if (productsGrid) observer.observe(productsGrid, { childList: true });
+
+// ===== Login / Logout Logic =====
+function updateAccountUI() {
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    const accountBtn = document.getElementById('accountBtn');
+    if (!accountBtn) return;
+    if (loggedInUser) {
+        accountBtn.innerHTML = `<span>${loggedInUser}</span> <i class="fas fa-sign-out-alt"></i>`;
+        accountBtn.style.justifyContent = 'flex-start';
+        accountBtn.style.alignItems = 'center';
+        accountBtn.style.padding = '0 0.5rem';
+        accountBtn.style.background = 'var(--light)';
+        accountBtn.style.color = 'var(--dark)';
+        accountBtn.style.borderRadius = '8px';
+        accountBtn.style.transition = 'background 0.2s';
+        accountBtn.onmouseover = () => { accountBtn.style.background = '#e2e8f0'; };
+        accountBtn.onmouseout = () => { accountBtn.style.background = 'var(--light)'; };
+        accountBtn.onclick = (e) => {
+            e.preventDefault();
+            if (confirm('Are you sure you want to log out?')) {
+                localStorage.removeItem('loggedInUser');
+                updateAccountUI();
+            }
+        };
+    } else {
+        accountBtn.innerHTML = '<i class="fas fa-user"></i>';
+        accountBtn.style.justifyContent = 'center';
+        accountBtn.style.alignItems = 'center';
+        accountBtn.style.padding = '0';
+        accountBtn.style.background = 'var(--light)';
+        accountBtn.style.color = 'var(--dark)';
+        accountBtn.onmouseover = () => { accountBtn.style.background = '#e2e8f0'; };
+        accountBtn.onmouseout = () => { accountBtn.style.background = 'var(--light)'; };
+        accountBtn.onclick = (e) => {
+            e.preventDefault();
+            document.getElementById('loginModal').style.display = 'block';
+        };
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize login modal
+    const loginModal = document.getElementById('loginModal');
+    const closeLoginModal = document.getElementById('closeLoginModal');
+    const loginForm = document.getElementById('loginForm');
+    const loginMessage = document.getElementById('loginMessage');
+
+    if (loginModal && closeLoginModal) {
+        closeLoginModal.onclick = () => {
+            loginModal.style.display = 'none';
+            loginMessage.textContent = '';
+            loginForm.reset();
+        };
+        window.onclick = (e) => {
+            if (e.target === loginModal) {
+                loginModal.style.display = 'none';
+                loginMessage.textContent = '';
+                loginForm.reset();
+            }
+        };
+    }
+
+    if (loginForm) {
+        loginForm.onsubmit = (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            if (username && password) {
+                // For demo, accept any credentials
+                localStorage.setItem('loggedInUser', username);
+                loginModal.style.display = 'none';
+                loginMessage.textContent = '';
+                loginForm.reset();
+                updateAccountUI();
+            } else {
+                loginMessage.textContent = 'Please enter both username and password';
+                loginMessage.style.color = '#dc2626';
+            }
+        };
+    }
+
+    // Initialize UI based on login state
+    updateAccountUI();
+});
+
+// Optional: close modal on ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const loginModal = document.getElementById('loginModal');
+        if (loginModal) loginModal.style.display = 'none';
+    }
+});
 
 console.log('%c🛍️ ShopHub', 'color: #6366f1; font-size: 24px; font-weight: bold;');
 console.log('%cWelcome to ShopHub! Modern shopping experience.', 'color: #64748b; font-size: 14px;');
